@@ -1,164 +1,254 @@
-<!DOCTYPE html>  <!-- -->
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>老马的主页</title>
     <style>
-    table {
-      width: 100%;
-    }
-    th {
-      background-color: linen;
-      color: blank;
-      text-align: center;
-    }
-    td {
-      color: blank;
-      text-align: center;
-    }
-
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+        .header h1 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .header p {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+        }
+        .card-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #3498db;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .card-title.study { border-color: #e74c3c; }
+        .card-title.source { border-color: #f39c12; }
+        .card-title.edu { border-color: #2ecc71; }
+        .card-title.tool { border-color: #9b59b6; }
+        .card-title.messy { border-color: #1abc9c; }
+        .link-list {
+            list-style: none;
+        }
+        .link-list li {
+            margin-bottom: 14px;
+            transition: all 0.2s ease;
+        }
+        .link-list li:hover {
+            transform: translateX(6px);
+        }
+        .link-list a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #34495e;
+            font-size: 16px;
+            padding: 8px 0;
+            transition: all 0.2s ease;
+        }
+        .link-list a:hover {
+            color: #3498db;
+        }
+        .link-list a::before {
+            content: "🔗";
+            font-size: 18px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            position: relative;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 16px 60px 16px 20px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            outline: none;
+        }
+        .search-box button {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #3498db;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        .search-box button:hover {
+            background: #2980b9;
+        }
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 28px;
+            }
+        }
     </style>
 </head>
 <body>
-   <table>
-        <tr>
-            <th><h2>常用学习网站</h2></th>
-            <th><h2>媒体素材网站</h2></th>
-            <th><h2>继续教育网站</h2></th>
-            <th><h2>常用工具网站</h2></th>
-            <th><h2>乱七八糟网站</h2></th>
+    <div class="container">
+        <div class="header">
+            <h1>老马的主页</h1>
+            <p>一站式学习·工作·工具·娱乐导航</p>
+        </div>
 
-        </tr>
-            <hr>
-        <tr>
-            <td>
-                <p>
-                <img src="https://s21.ax1x.com/2025/06/30/pVu95xe.png" width="60px"/>
-                <a href="https://www.w3school.com.cn" target="_balnk">w3school学习</a>
-                </p>
-                <p>
-                <img src="https://s21.ax1x.com/2025/06/30/pVu95xe.png" width="60px"/>
-                <a href="https://www.itbaizhan.com/" target="_balnk">百战程序员学习</a>
-                </p>
-                 <p>
-                <img src="https://s21.ax1x.com/2025/06/30/pVu95xe.png" width="60px"/>
-                <a href="https://www.runoob.com/" target="_balnk">菜鸟学习网站  </a>
-                </p>
-                <p>
-                <img src="https://s21.ax1x.com/2025/06/30/pVu95xe.png" width="60px"/>
-                <a href="https://www.2qj.com/" target="_balnk">设计视频教程1</a>
-                </p>
-                <p>
-                <img src="https://s21.ax1x.com/2025/06/30/pVu95xe.png" width="60px"/>
-                <a href="https://www.doyoudo.com/" target="_balnk">设计视频教程2</a>
-                </p>
+        <!-- 新增顶部搜索框，直接百度搜索 -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="🔍 输入内容，直接百度搜索...">
+            <button onclick="search()">搜索</button>
+        </div>
 
-            </td>
-            <td>
-                <p>
-                <img src="https://s21.ax1x.com/2025/07/01/pVuEsWq.png" width="60px"/>
-                <a href="https://www.toutiao.com/" target="_balnk">今日头条网站</a>
-                </p>
-                <p>
-                <img src="https://s21.ax1x.com/2025/07/01/pVuEsWq.png" width="60px"/>
-                <a href="https://www.douyin.com/" target="_balnk">抖音娱乐网站</a>
-                </p>
-                <p>
-                <img src="https://s21.ax1x.com/2025/07/01/pVuEsWq.png" width="60px"/>
-                <a href="http://www.2t58.com/" target="_balnk">爱听音乐网站</a>
-                </p>
-                 </p>
-                <p>
-                <img src="https://s21.ax1x.com/2025/07/01/pVuEsWq.png" width="60px"/>
-                <a href="https://ibaotu.com/" target="_balnk">包图图片素材</a>
-                </p>
-                 <p>
-                <img src="https://s21.ax1x.com/2025/07/01/pVuEsWq.png" width="60px"/>
-                <a href="https://www.nipic.com/" target="_balnk">昵图图片素材</a>
-                </p>
-                 <p>
-                <img src="https://s21.ax1x.com/2025/07/01/pVuEsWq.png" width="60px"/>
-                <a href="https://www.pickfree.cn/" target="_balnk">免费媒体素材</a>
-                </p>
-            </td>
-            <td>
-                <p>
-                <img src="https://s21.ax1x.com/2025/06/30/pVu9bVI.png" width="60px"/>
-                <a href="https://nxzj.chinahrt.com/" target="_balnk">专业技术公需课</a>
-                </p>
-                <p>
-                <img src="https://s21.ax1x.com/2025/06/30/pVu9bVI.png" width="60px"/>
-                <a href="https://auth.smartedu.cn/uias/login" target="_balnk">智慧教育平台</a>
-                </p>
-                <p>
-                <img src="https://s21.ax1x.com/2025/06/30/pVu9bVI.png" width="60px"/>
-                <a href="http://61.133.202.236" target="_balnk">教师管理系统</a>
-                </p>
-                 <p>
-                <img src="https://s21.ax1x.com/2025/06/30/pVu9bVI.png" width="60px"/>
-                <a href="https://www.zqy.com/" target="_balnk">正确云教学资源</a>
-                </p>
-                  <p>
-                 <p>
-                <img src="https://s21.ax1x.com/2025/06/30/pVu9bVI.png" width="60px"/>
-                <a href="https://vdo.ninja/" target="_balnk">微课直播课录制</a>
-                </p>
+        <div class="grid">
+            <!-- 1. 常用学习网站 -->
+            <div class="card">
+                <div class="card-title study">
+                    <span>📚</span> 常用学习网站
+                </div>
+                <ul class="link-list">
+                    <li><a href="https://www.w3school.com.cn/" target="_blank">w3school学习</a></li>
+                    <li><a href="https://www.itbaizhan.com/" target="_blank">百战程序员学习</a></li>
+                    <li><a href="https://www.runoob.com/" target="_blank">菜鸟学习网站</a></li>
+                    <li><a href="https://www.2qj.com/" target="_blank">设计视频教程1</a></li>
+                    <li><a href="https://www.doyoudo.com/" target="_blank">设计视频教程2</a></li>
+                </ul>
+            </div>
 
+            <!-- 2. 媒体素材网站 -->
+            <div class="card">
+                <div class="card-title source">
+                    <span>🎬</span> 媒体素材网站
+                </div>
+                <ul class="link-list">
+                    <li><a href="https://www.toutiao.com/" target="_blank">今日头条网站</a></li>
+                    <li><a href="https://www.douyin.com/jingxuan" target="_blank">抖音娱乐网站</a></li>
+                    <li><a href="http://www.2t58.com/" target="_blank">爱听音乐网站</a></li>
+                    <li><a href="https://www.ibaotu.com/" target="_blank">包图图片素材</a></li>
+                    <li><a href="https://www.nipic.com/" target="_blank">昵图图片素材</a></li>
+                    <li><a href=https://www.pickfree.cn/" target="_blank">免费媒体素材</a></li>
+                </ul>
+            </div>
 
+            <!-- 3. 继续教育网站 -->
+            <div class="card">
+                <div class="card-title edu">
+                    <span>🎓</span> 继续教育网站
+                </div>
+                <ul class="link-list">
+                    <li><a href="https://nxzj.chinahrt.com/" target="_blank">专业技术公需课</a></li>
+                    <li><a href="https://www.nxeduyun.com/" target="_blank">宁夏教育资源公共</a></li>
+                    <li><a href="https://auth.smartedu.cn/uias/login" target="_blank">智慧教育平台</a></li>
+                    <li><a href="https://www.nxeduyun.com/" target="_blank">正确云教学资源</a></li>
+                    <li><a href="https://pt.xszz.edu.cn/#/login" target="_blank">营养午餐资助</a></li>
+                    <li><a href="https://dining.ccblife.ccb.com/P1StaRes/NewAccount/login" target="_blank">智慧食堂平台</a></li>
+                </ul>
+            </div>
 
-            </td>
-             <td>
-                <p>
-                <img src="https://s21.ax1x.com/2025/07/01/pVuErYn.png" width="60px"/>
-                <a href="https://chat.deepseek.com/" target="_balnk">deepseek查询工具  </a>
-                </p>
-                 <p>
-                <img src="https://s21.ax1x.com/2025/07/01/pVuErYn.png" width="60px"/>
-                <a href="https://www.doubao.com/chat/" target="_balnk">豆包AI查询工具      </a>
-                </p>
-                  <p>
-                <img src="https://s21.ax1x.com/2025/07/01/pVuErYn.png" width="60px"/>
-                <a href="https://www.lddgo.net/convert/curl-to-code" target="_balnk">在线url解析工具  </a>
-                </p>
-                  <p>
-                <img src="https://s21.ax1x.com/2025/07/01/pVuErYn.png" width="60px"/>
-                <a href="https://www.w3cschool.cn/tools/index?name=decode_encode_tool" target="_balnk">在线文字转换工具</a>
-                </p>
-                 <p>
-                <img src="https://s21.ax1x.com/2025/07/01/pVuErYn.png" width="60px"/>
-                <a href="https://www.ilovepdf.com/zh-cn" target="_balnk">PDF文件在线编辑</a>
-                </p>
-            </td>
-             <td>
-                 <p>
-                <img src="https://s21.ax1x.com/2025/06/30/pVu9Trd.png" width="60px"/>
-                <a href="https://www.shufazidian.com/" target="_balnk">书法字典</a>
-                </p>
-                 <p>
-                <img src="https://s21.ax1x.com/2025/06/30/pVu9Trd.png" width="60px"/>
-                <a href="https://www.gushiwen.cn/" target="_balnk">古诗文网</a>
-                </p>
-                 <p>
-                <img src="https://s21.ax1x.com/2025/06/30/pVu9Trd.png" width="60px"/>
-                <a href="http://bzdt.ch.mnr.gov.cn/" target="_balnk">高清看地图</a>
-                </p>
-                <p>
-                <img src="https://s21.ax1x.com/2025/06/30/pVu9Trd.png" width="60px"/>
-                <a href="http://www.onegreen.net/maps/m/china.htm" target="_balnk">高清看地图</a>
-                </p>
-                 <p>
-                <img src="https://s21.ax1x.com/2025/06/30/pVu9Trd.png" width="60px"/>
-                <a href="http://vlo.name:3000/ssdtool/" target="_balnk">固态硬盘id</a>
-                </p>
-                 <p>
-                <img src="https://s21.ax1x.com/2025/06/30/pVu9Trd.png" width="60px"/>
-                <a href="https://imgse.com/" target="_balnk">路过图床</a>
-                </p>
+            <!-- 4. 常用工具网站 -->
+            <div class="card">
+                <div class="card-title tool">
+                    <span>🛠️</span> 常用工具网站
+                </div>
+                <ul class="link-list">
+                    <li><a href="https://chat.deepseek.com" target="_blank">deepseek查询工具</a></li>
+                    <li><a href="https://www.doubao.com/" target="_blank">豆包AI查询工具</a></li>
+                    <li><a href="https://www.lddgo.net/convert/curl-to-code" target="_blank">在线url解析工具</a></li>
+                    <li><a href="https://www.w3cschool.cn/tools/index?name=decode_encode_tool" target="_blank">在线文字转换工具</a></li>
+                    <li><a href="https://www.ilovepdf.com/zh-cn" target="_blank">PDF文件在线编辑</a></li>
+                    <li><a href="https://vocalremover.org/zh/pitch" target="_blank">音频文件在线编辑</a></li>
+                </ul>
+            </div>
 
-            </td>
-        </tr>
+            <!-- 5. 乱七八糟网站 -->
+            <div class="card">
+                <div class="card-title messy">
+                    <span>🎨</span> 乱七八糟网站
+                </div>
+                <ul class="link-list">
+                    <li><a href="https://www.shufazidian.com/" target="_blank">书法字典</a></li>
+                    <li><a href="https://www.gushiwen.cn/" target="_blank">古诗文网</a></li>
+                    <li><a href="http://bzdt.ch.mnr.gov.cn/" target="_blank">高清看地图</a></li>
+                    <li><a href="http://www.onegreen.net/maps/m/china.htm" target="_blank">高清看地图</a></li>
+                    <li><a href="http://vlo.name:3000/ssdtool/" target="_blank">固态硬盘id</a></li>
+                    <li><a href="https://imgchr.com/" target="_blank">路过图床</a></li>
+                </ul>
+            </div>
+        </div>
 
-    </table>
+        <div class="footer">
+            <p>Made with ❤️ by 老马 | 2026 版导航主页</p>
+        </div>
+    </div>
 
+    <script>
+        // 搜索功能：回车/点击按钮都能触发
+        function search() {
+            const input = document.getElementById('searchInput');
+            const keyword = input.value.trim();
+            if (keyword) {
+                window.open(`https://www.baidu.com/s?wd=${encodeURIComponent(keyword)}`, '_blank');
+                input.value = '';
+            }
+        }
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') search();
+        });
+    </script>
 </body>
 </html>
